@@ -165,11 +165,11 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt mt-1 mr-2"></i>
-                <span>123 Tech Plaza, Suite 500<br />San Francisco, CA 94103</span>
+                <span>Virtual Headquarters</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-phone-alt mt-1 mr-2"></i>
-                <span>(415) 555-0123</span>
+                <span>+917774801785</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-envelope mt-1 mr-2"></i>
