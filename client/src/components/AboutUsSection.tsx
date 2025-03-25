@@ -56,7 +56,7 @@ export default function AboutUsSection() {
                   <i className="fas fa-award"></i>
                 </div>
                 <div>
-                  <h4 className="font-semibold">10+ Years</h4>
+                  <h4 className="font-semibold">7+ Years</h4>
                   <p className="text-sm text-neutral-500">Industry Experience</p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function AboutUsSection() {
                   <i className="fas fa-check-circle"></i>
                 </div>
                 <div>
-                  <h4 className="font-semibold">200+</h4>
+                  <h4 className="font-semibold">10+</h4>
                   <p className="text-sm text-neutral-500">Projects Completed</p>
                 </div>
               </div>
@@ -74,7 +74,7 @@ export default function AboutUsSection() {
                   <i className="fas fa-users"></i>
                 </div>
                 <div>
-                  <h4 className="font-semibold">50+</h4>
+                  <h4 className="font-semibold">10+</h4>
                   <p className="text-sm text-neutral-500">Expert Team Members</p>
                 </div>
               </div>
