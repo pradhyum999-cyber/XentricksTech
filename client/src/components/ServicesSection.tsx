@@ -20,15 +20,17 @@ export default function ServicesSection() {
   return (
     <section id="services" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-16 reveal">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Our Services</h2>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+            Our Services
+          </h2>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             We offer comprehensive digital solutions tailored to meet your business needs and drive growth.
           </p>
         </div>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="flex gap-8 overflow-x-auto scroll-smooth pb-4"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -37,7 +39,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <motion.div 
               key={index}
-              className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg reveal service-card"
+              className="flex-none w-80 bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               variants={item}
             >
               <div className="text-accent text-4xl mb-4">

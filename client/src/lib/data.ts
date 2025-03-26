@@ -39,10 +39,12 @@ export const services = [
       "Data migration & management"
     ]
   },
-  { title: "Digital Marketing", description: "Integrated strategies combining creative campaigns with AI automation to drive engagement and maximize ROI.", 
+  { title: "Digital Marketing",
+    description: "Integrated strategies combining creative campaigns with AI automation to drive engagement and maximize ROI.", 
     icon: "fas fa-chart-line", 
     benefits: ["Custom campaign management", 
-      "AI-driven insights", "Real-time optimization"] }
+      "AI-driven insights", "Real-time optimization"] 
+  }
 ];
 
 export const testimonials = [
