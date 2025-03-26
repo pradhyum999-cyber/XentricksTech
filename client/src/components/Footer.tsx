@@ -173,7 +173,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <i className="fas fa-envelope mt-1 mr-2"></i>
-                <span>info@xentricks.com</span>
+                <span>xentrickss@gmail.com</span>
               </li>
             </ul>
           </div>

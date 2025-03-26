@@ -36,6 +36,18 @@ var insertContactMessageSchema = createInsertSchema(contactMessages).pick({
 // server/routes.ts
 import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+dotenv.config();
+var transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    // Your email address
+    pass: process.env.EMAIL_PASS
+    // Your email app password
+  }
+});
 async function registerRoutes(app2) {
   app2.post("/api/contact", async (req, res) => {
     try {
@@ -44,6 +56,37 @@ async function registerRoutes(app2) {
         ...contactData,
         createdAt: (/* @__PURE__ */ new Date()).toISOString()
       };
+      const emailText = `
+        New Contact Form Submission:
+        
+        Name: ${contactData.name}
+        Email: ${contactData.email}
+        Phone: ${contactData.phone || "Not provided"}
+        Service: ${contactData.service}
+        
+        Message:
+        ${contactData.message}
+        
+        Submitted at: ${messageWithTimestamp.createdAt}
+      `;
+      await transporter.sendMail({
+        from: process.env.EMAIL_USER,
+        // Sender address
+        to: "xentrickss@gmail.com",
+        // Recipient address from your contact section
+        subject: "New Contact Form Submission from " + contactData.name,
+        text: emailText,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${contactData.name}</p>
+          <p><strong>Email:</strong> ${contactData.email}</p>
+          <p><strong>Phone:</strong> ${contactData.phone || "Not provided"}</p>
+          <p><strong>Service:</strong> ${contactData.service}</p>
+          <h3>Message:</h3>
+          <p>${contactData.message}</p>
+          <p><em>Submitted at: ${messageWithTimestamp.createdAt}</em></p>
+        `
+      });
       console.log("Contact form submission:", messageWithTimestamp);
       return res.status(200).json({
         success: true,
@@ -57,6 +100,7 @@ async function registerRoutes(app2) {
           message: validationError.message
         });
       }
+      console.error("Email sending error:", error);
       return res.status(500).json({
         success: false,
         message: "An error occurred while processing your request."
