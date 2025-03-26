@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -39,13 +39,13 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="#home" 
+                <a
+                  href="#home"
                   className="hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
@@ -56,8 +56,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#services" 
+                <a
+                  href="#services"
                   className="hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
@@ -68,8 +68,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#about" 
+                <a
+                  href="#about"
                   className="hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
@@ -80,8 +80,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#testimonials" 
+                <a
+                  href="#testimonials"
                   className="hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
@@ -92,8 +92,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#contact" 
+                <a
+                  href="#contact"
                   className="hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
@@ -105,13 +105,13 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Our Services</h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="#services" 
+                <a
+                  href="#services"
                   className="hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
@@ -122,8 +122,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#services" 
+                <a
+                  href="#services"
                   className="hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
@@ -134,8 +134,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#services" 
+                <a
+                  href="#services"
                   className="hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
@@ -146,8 +146,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#services" 
+                <a
+                  href="#services"
                   className="hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
@@ -157,9 +157,21 @@ export default function Footer() {
                   Salesforce CRM Services
                 </a>
               </li>
+              <li>
+                <a
+                  href="#services"
+                  className="hover:text-white transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('services');
+                  }}
+                >
+                  Digital Marketing
+                </a>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-white font-semibold text-lg mb-4">Contact Us</h4>
             <ul className="space-y-2">
@@ -178,7 +190,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-neutral-700 pt-6 mt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm mb-4 md:mb-0">
             &copy; {currentYear} Xentricks. All rights reserved.
